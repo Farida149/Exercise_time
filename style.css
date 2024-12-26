@@ -1,0 +1,78 @@
+/* Base styles */
+body {
+    background-color: #2E2E2E;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  /* Timer Input Fields */
+  .input-fields input, .input-fields select {
+    font-size: 18px;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #444;
+    color: #FFF;
+  }
+  
+  /* Timer Display */
+  .timer-display {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px 0;
+  }
+  
+  /* Control Buttons */
+  .control-buttons button {
+    background-color: #FF4500;
+    color: #FFF;
+    border: none;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .control-buttons button:active {
+    background-color: #E03E00;
+  }
+  
+  /* Media Queries for Mobile Responsiveness */
+  @media (max-width: 600px) {
+    .input-fields {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .input-fields input, .input-fields select {
+      width: 80%;
+      margin: 5px 0;
+    }
+  
+    .control-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .control-buttons button {
+      width: 80%;
+      margin: 5px 0;
+    }
+  
+    .timer-display {
+      font-size: 40px;
+    }
+  }
