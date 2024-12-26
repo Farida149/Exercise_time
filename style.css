@@ -51,7 +51,6 @@ body {
   /* Media Queries for Mobile Responsiveness */
   @media (max-width: 600px) {
     .input-fields {
-      display: flex;
       flex-direction: column;
       align-items: center;
     }
@@ -62,7 +61,6 @@ body {
     }
   
     .control-buttons {
-      display: flex;
       flex-direction: column;
       align-items: center;
     }
