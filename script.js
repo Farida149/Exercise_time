@@ -22,11 +22,13 @@ function startTimer() {
     initializeTimer();
     isRunning = true;
     startStopBtn.textContent = 'Stop';
+    startStopBtn.classList.add('active'); // Add active class
     timerInterval = setInterval(updateTimer, 1000);
   } else {
     stopTimer();
   }
 }
+
 
 function initializeTimer() {
   const workoutTime = parseInt(workoutInput.value) || 0;
@@ -46,14 +48,14 @@ function updateTimer() {
     timerDisplay.textContent = formatTime(restSeconds);
   } else {
     stopTimer();
-    resetTimer(); // Automatically reset after each workout and rest session
+    resetTimer(); 
   }
 }
-
 function stopTimer() {
   clearInterval(timerInterval);
   isRunning = false;
   startStopBtn.textContent = 'Start';
+  startStopBtn.classList.remove('active'); // Remove active class
 }
 
 function resetTimer() {
@@ -61,6 +63,8 @@ function resetTimer() {
   timerSeconds = 0;
   restSeconds = 0;
   timerDisplay.textContent = '00:00';
+  resetBtn.classList.add('active'); // Add active class
+  setTimeout(() => resetBtn.classList.remove('active'), 200); // Remove active class after a short delay
 }
 
 startStopBtn.addEventListener('click', startTimer);
