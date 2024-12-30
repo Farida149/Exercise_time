@@ -1,4 +1,4 @@
-/* Base styles */
+
 body {
   background-color: #2E2E2E;
   color: #FFFFFF;
@@ -34,7 +34,7 @@ body {
 
 /* Control Buttons */
 .control-buttons button {
-  background-color: #FF4500;
+  background-color: #FF4500; /* Default color */
   color: #FFF;
   border: none;
   padding: 15px 30px;
@@ -45,41 +45,35 @@ body {
   transition: background-color 0.3s;
 }
 
+
 .control-buttons button:active {
-  background-color: #E03E00;
+  background-color: #FF6347; 
 }
 
 
-.control-buttons button.active {
-  background-color: #FF6347;
+.control-buttons button:hover {
+  background-color: #FF6347; 
 }
 
-
+/* Media Query for Smaller Screens */
 @media (max-width: 600px) {
   .input-fields {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .input-fields input, .input-fields select {
-      width: 80%;
-      margin: 5px 0;
+    width: 80%;
+    margin: 5px 0;
   }
 
   .control-buttons {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .control-buttons button {
-      width: 80%;
-      margin: 5px 0;
-  }
-  .control-buttons button.active {
-    background-color: #FF6347;
-  }
-
-  .timer-display {
-      font-size: 40px;
+    width: 80%;
+    margin: 5px 0;
   }
 }
